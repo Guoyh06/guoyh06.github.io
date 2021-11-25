@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots,xeCJK}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\title{三角形五心研究报告}
+\begin{document}
+	\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+		\clip(-1.1895818381658882,-1.1799964168789951) rectangle (8.138849853944266,4.635050754116558);
+		\draw [line width=2pt] (0,0)-- (3,4);
+		\draw [line width=2pt] (3,4)-- (4,0);
+		\draw [line width=2pt] (4,0)-- (0,0);
+		\draw [line width=2pt] (3,4)-- (2,0);
+		\draw [line width=2pt] (0,0)-- (3.5,2);
+		\draw [line width=2pt,domain=-1.1895818381658882:4] plot(\x,{(-5.333333333333333--1.3333333333333332*\x)/-1.6666666666666665});
+		\begin{scriptsize}
+			\draw [fill=ududff] (0,0) circle (2.5pt);
+			\draw[color=ududff] (0.05258530621431502,0.147417492311613) node {$A$};
+			\draw [fill=ududff] (3,4) circle (2.5pt);
+			\draw[color=ududff] (3.0544892384664726,4.147926383771381) node {$B$};
+			\draw [fill=ududff] (4,0) circle (2.5pt);
+			\draw[color=ududff] (4.053094197674087,0.147417492311613) node {$C$};
+			\draw [fill=uuuuuu] (3.5,2) circle (2pt);
+			\draw[color=uuuuuu] (3.55379171807028,2.13244930146821) node {$D$};
+			\draw [fill=uuuuuu] (2,0) circle (2pt);
+			\draw[color=uuuuuu] (2.0558842792588585,0.13523938305298355) node {$E$};
+			\draw [fill=uuuuuu] (2.3333333333333335,1.3333333333333332) circle (2pt);
+			\draw[color=uuuuuu] (2.390782283871168,1.4687423468729064) node {$G$};
+			\draw [fill=uuuuuu] (1.5,2) circle (2pt);
+			\draw[color=uuuuuu] (1.5565817996550512,2.13244930146821) node {$F$};
+		\end{scriptsize}
+	\end{tikzpicture}
+\end{document}
